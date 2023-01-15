@@ -1,4 +1,4 @@
-package pl.rutkowski.zadanie21_1;
+package pl.rutkowski.zadanie21z1;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

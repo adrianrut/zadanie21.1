@@ -1,9 +1,12 @@
-package pl.rutkowski.zadanie21_1;
+package pl.rutkowski.zadanie21z1;
 
 public class Product {
     private String name;
     private double price;
     private Category category;
+
+    public Product() {
+    }
 
     public Product(String name, double price, Category category) {
         this.name = name;

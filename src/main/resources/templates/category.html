@@ -22,11 +22,8 @@
             </div>
             <span th:text="|${#numbers.formatDecimal(product.price, 0, 'WHITESPACE', 2, 'COMMA')}zł|">14</span>
         </li>
-        <b th:text="|Suma cen: ${#numbers.formatDecimal(priceSum, 0, 'WHITESPACE', 2, 'COMMA')}zł|"></b>
-
+        <b th:text="|Suma cen: ${#numbers.formatDecimal(priceSum, 0, 'WHITESPACE', 2, 'COMMA')}zł|">SUma cen: 100,00</b>
     </ol>
 </div>
-
-
 </body>
 </html>

@@ -1,4 +1,4 @@
-package pl.rutkowski.zadanie21_1;
+package pl.rutkowski.zadanie21z1;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package pl.rutkowski.zadanie21_1;
+package pl.rutkowski.zadanie21z1;
 
 import org.springframework.stereotype.Repository;
 
@@ -33,7 +33,8 @@ public class ProductRepository {
     public List<Product> findAll() {
         return productList;
     }
-    public void add (Product product) {
+
+    public void add(Product product) {
         productList.add(product);
     }
 }
