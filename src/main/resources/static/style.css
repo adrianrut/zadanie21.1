@@ -1,8 +1,12 @@
 .header {
-    background: aqua;
-    padding: 30px;
+    text-align: center;
 }
 .content {
-    background: darkkhaki;
-    padding: 30px;
+    text-align: center;
 }
+.img {
+    margin-left: 140px;
+    width:5px;
+    height:5px;
+}
+

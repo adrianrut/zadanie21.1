@@ -9,9 +9,9 @@
 </head>
 <body style="width: 500px; margin: 50px auto;">
 
-<form method="post" action="/save" th:object="${product}">
+<form method="post" action="/zapisz" th:object="${product}">
 
-        <legend>Dodaj produkt</legend>
+        <label>Dodaj produkt</label>
         <div class="mb-3">
             <label class="form-label">Podaj nazwę</label>
             <label>
@@ -32,12 +32,6 @@
                             th:value="${category}" th:text="${category.getDescription()}">Wybierz kategorię</option>
                 </select>
             </label>
-        </div>
-        <div class="mb-3">
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="disabledFieldsetCheck" disabled>
-                <label class="form-check-label" for="disabledFieldsetCheck"></label>
-            </div>
         </div>
         <button type="submit" class="btn btn-primary">Dodaj</button>
 </form>

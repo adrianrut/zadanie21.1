@@ -30,6 +30,15 @@ public class ProductRepository {
         return result;
     }
 
+    public double getSum(List<Product> products) {
+        double sum = 0;
+        for (Product product : products) {
+            sum += product.getPrice();
+        }
+        return sum;
+
+    }
+
     public List<Product> findAll() {
         return productList;
     }

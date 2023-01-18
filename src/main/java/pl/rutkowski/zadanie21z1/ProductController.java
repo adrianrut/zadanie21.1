@@ -22,26 +22,21 @@ public class ProductController {
         List<Product> products;
         if (category == null) {
             products = productRepository.findAll();
-            getSum(model, products);
-            return "products";
+            String productsList = "Lista produktów";
+            model.addAttribute("title", productsList);
         } else {
             products = productRepository.findByCategory(category);
-            getSum(model, products);
-            return "category";
+            String productsFromCategory = "Lista produktów wybranej kategorii";
+            model.addAttribute("title", productsFromCategory);
         }
-    }
-
-    private void getSum(Model model, List<Product> products) {
+        double sum = productRepository.getSum(products);
         model.addAttribute("products", products);
-        double sum = 0;
-        for (Product product : products) {
-            sum += product.getPrice();
-        }
         model.addAttribute("priceSum", sum);
+        return "products";
     }
 
 
-    @PostMapping("/save")
+    @PostMapping("/zapisz")
     public String add(Product product) {
         productRepository.add(product);
         return "redirect:/lista";
@@ -53,12 +48,9 @@ public class ProductController {
         return "addProduct";
     }
 
-//    @PostMapping("/dodaj")
-//    public String add(@RequestParam String name,
-//                      @RequestParam double price,
-//                      @RequestParam Category category) {
-//        Product product = new Product(name, price, category);
-//        productRepository.add(product);
-//        return "redirect:/lista";
-//    }
+    @GetMapping("/")
+    String home() {
+        return "index";
+    }
+
 }
